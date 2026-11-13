@@ -8,6 +8,8 @@ You build it yourself from **your own copy** of Life with PlayStation v1.00. Thi
 
 ![Life Around Us](screenshots/01-splash.jpg)
 
+> **New in v1.1:** full screen, smoother globe edges, live earthquakes, a Celsius/Fahrenheit switch, an auto tour after 10 seconds idle and 13 more cities (131 in all). See the [patch notes](CHANGELOG.md).
+
 ---
 
 ## Screenshots
@@ -24,7 +26,7 @@ You build it yourself from **your own copy** of Life with PlayStation v1.00. Thi
 | | | |
 |---|---|---|
 | ![Music menu](screenshots/08-music-menu.jpg) | ![Select Track](screenshots/09-select-track.jpg) | ![Select by Mood](screenshots/10-select-by-mood.jpg) |
-| *The options menu is music only* | *Pick a track by name* | *Or pick by mood* |
+| *The options menu: Settings and Music* | *Pick a track by name* | *Or pick by mood* |
 
 ---
 
@@ -35,32 +37,38 @@ Features **in bold** are new in Life Around Us. The rest come from the original 
 **The globe**
 - 3D Earth with a real day/night cycle and glowing city lights at night
 - Rotate and zoom with the controller
+- Auto tour: when left alone, the camera flies from city to city
 - Live cloud cover over the globe
 - **Today's real cloud map, downloaded at every start**
 - **Twinkling stars in space**
 - **Brighter city lights and a sharper Earth**
+- **Smoother globe edges (edge anti-aliasing)**
+- **The auto tour starts after 10 seconds idle (was 15)**
 
 **Live Channel**
 - City markers with weather icons and temperatures
 - News headlines for each city
 - City photos in the info panel
 - **Working again: live news (Google News), weather (Open-Meteo) and city photos (Wikipedia), refreshed every time you open the app**
-- **118 cities (the original had about 33), including Seattle, Las Vegas, Caracas, La Paz, Lisbon, Istanbul, Athens, Vienna, Stockholm, Delhi, Mumbai, Karachi, Hanoi, Taipei and more**
+- **131 cities (the original had about 33), including Seattle, Las Vegas, Honolulu, Havana, Caracas, Brasília, Reykjavík, Lisbon, Istanbul, Athens, Vienna, Stockholm, Aleppo, Baghdad, Tashkent, Kathmandu, Delhi, Mumbai, Karachi, Malé, Hanoi, Jakarta, Taipei, Perth and more**
+- **Earthquakes: every magnitude 5.0+ quake from the last hour appears on the globe with a red marker, its location, depth and time (U.S. Geological Survey data, checked every time you open the app)**
 - **Local time next to every city, updated every minute**
 - **Temperatures in whole degrees (15 °C, not 14.8 °C)**
+- Celsius or Fahrenheit, **now in the options menu: Settings > Weather > Temperature**
 - **Clouds and cities shown together**
 - **A "Your City" card with your local weather and time, shown in rotation with the credits**
 - **News headlines no longer open a pop-up you can't close**
 
 **Music and sound**
 - The original soundtrack and sound effects
-- **Music-only options menu: Select Track (Dawn's, Daylight, Afterlight, Moonlight and Starlight Theme) or Select by Mood (Energetic, Calm, Dramatic, Upbeat, Electronic)**
+- **Music menu: Select Track (Dawn's, Daylight, Afterlight, Moonlight and Starlight Theme) or Select by Mood (Energetic, Calm, Dramatic, Upbeat, Electronic)**
 - **Soft ocean-wave ambience under the music**
 - **A new track, ThemeSong06, played first at start-up**
 - **Cleaner sounds: the globe-rotation sound stays, the old scrolling noise is gone, and a jingle plays when you snap to a city**
 
 **PC version**
 - **Native Windows program (no emulator) using DirectX 12**
+- **Full screen by default; Alt+Enter or F11 switches between full screen and a window**
 - **Smooth 60 fps**
 - **Renders at 1440p on stronger graphics cards and 1080p on weaker ones (tested on integrated Intel graphics)**
 - **Sharp text on high-DPI screens, 16x texture filtering and image sharpening**
@@ -106,7 +114,7 @@ Copy the installed app folder **`/dev_hdd0/game/NPIA00002`** off your PS3 to you
 
 ### Step 2: Download the build kit
 
-1. Go to [**Releases**](../../releases/latest) and download **`Life-Around-Us-Build-Kit.zip`** (about 50 MB).
+1. Go to [**Releases**](../../releases/latest) and download **`Life-Around-Us-Build-Kit.zip`** (about 52 MB).
 2. Right-click the zip and choose **Extract All...**
 3. Extract it to a normal folder, such as **Documents** or **Desktop**.
    > Don't run it from inside the zip or from a temporary folder: RPCS3 (used to decrypt your files) refuses to run from temporary folders.
@@ -159,6 +167,7 @@ To uninstall, go to **Settings > Apps > Installed apps > Life Around Us > Uninst
 | Select | Cross (A) | Z or Space |
 | Back | Circle (B) | X or Backspace |
 | Options menu (music) | Triangle (Y) | S or Esc |
+| Full screen / window | | Alt+Enter or F11 |
 | Quit | | Close the window or Alt+F4 |
 
 A DualSense or DualShock 4 works over USB or Bluetooth without Steam or DS4Windows. Xbox controllers work too.
@@ -204,6 +213,12 @@ No. Sign-in is removed. News comes from Google News, weather from Open-Meteo, ph
 
 **What does "Your City" use?**
 On each start, the app looks up your approximate city from your internet connection (via get.geojs.io) to show your local weather and time. To set it yourself, put a file called `my_city.txt` in the app folder (`%LOCALAPPDATA%\Programs\Life Around Us`) containing a line like `Paris, 48.86, 2.35`.
+
+**Can I switch to Fahrenheit?**
+Yes. Press Triangle (or S) for the options menu, then **Settings > Weather > Temperature > Fahrenheit**. The app remembers your choice.
+
+**Why don't I see any earthquakes?**
+Only quakes of magnitude 5.0 or stronger from the last hour are shown, and the list is checked each time you open the app. Most hours have none; worldwide there are roughly one or two a day.
 
 **Can I add my own music?**
 No. Life Around Us plays only its built-in soundtrack.
