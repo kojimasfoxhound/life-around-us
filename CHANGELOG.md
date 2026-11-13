@@ -1,5 +1,27 @@
 # Patch notes
 
+## v1.2
+
+To update, download the new **Life-Around-Us-Build-Kit.zip** from [Releases](../../releases/latest), extract it and build again with your v1.00 PKG folder. Then install the new `Life Around Us Setup.exe` over the old one.
+
+### New
+- **Live webcams.** Six cities show a current camera picture of the city, marked **LIVE**, instead of a photo: **Hong Kong, Chicago, Vienna, Berlin, Seattle and Paris**. If a camera is offline or its picture is old, the city's normal photo is shown.
+- **Live refresh every 3 hours.** News, weather, webcams and earthquakes update by themselves while the app runs. The refresh only happens when nobody has touched the controller for 10 seconds (or the auto tour is running): the app reloads in a couple of seconds and the music carries on where it left off.
+- **Breaking news first.** Headlines marked "Breaking", "Just in", "Live updates", "Developing" or "Urgent" go to the top of each city's news. News is from the last 24 hours.
+- **The globe flies to new earthquakes.** When a new earthquake comes in, the camera goes straight to it and stays for 10 seconds so you can read about it, then the auto tour carries on.
+
+### Changed
+- **Earthquakes: magnitude 6.0 or stronger** (was 5.0, which happens many times a day), from the **last 3 hours** (was 1 hour), matching the refresh.
+- **The auto tour visits every city once** before any city comes round again.
+- **Music order.** At start-up ThemeSong06 plays, then ThemeSong03, then the rest of the soundtrack. After the last track it starts again from ThemeSong06.
+
+### Fixed
+- **City clocks no longer stop.** After running for many hours, the local time next to some cities could stop updating. Every label now stays matched to its city, and a label that was missed is found again and corrected.
+- **No more black screensaver.** The PS3 screensaver, and its "Music is currently disabled" message that covered the globe, are turned off. The auto tour takes its place.
+- **Logs from the previous run are kept** as `run.prev.log` and `update.prev.log` in the app folder, which helps if you report a problem.
+
+---
+
 ## v1.1
 
 To update, download the new **Life-Around-Us-Build-Kit.zip** from [Releases](../../releases/latest), extract it and build again with your v1.00 PKG folder. Then install the new `Life Around Us Setup.exe` over the old one. Your settings are reset to the defaults.

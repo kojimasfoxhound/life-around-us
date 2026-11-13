@@ -8,7 +8,7 @@ You build it yourself from **your own copy** of Life with PlayStation v1.00. Thi
 
 ![Life Around Us](screenshots/01-splash.jpg)
 
-> **New in v1.1:** full screen, smoother globe edges, live earthquakes, a Celsius/Fahrenheit switch, an auto tour after 10 seconds idle and 13 more cities (131 in all). See the [patch notes](CHANGELOG.md).
+> **New in v1.2:** live city webcams, news, weather and earthquakes that refresh by themselves every 3 hours, the globe flying to new M6.0+ earthquakes, an auto tour that visits every city before repeating, a new music order, and clocks that keep running all night. See the [patch notes](CHANGELOG.md).
 
 ---
 
@@ -43,15 +43,17 @@ Features **in bold** are new in Life Around Us. The rest come from the original 
 - **Twinkling stars in space**
 - **Brighter city lights and a sharper Earth**
 - **Smoother globe edges (edge anti-aliasing)**
-- **The auto tour starts after 10 seconds idle (was 15)**
+- **The auto tour starts after 10 seconds idle (was 15) and visits every city once before any city comes round again**
 
 **Live Channel**
 - City markers with weather icons and temperatures
 - News headlines for each city
 - City photos in the info panel
-- **Working again: live news (Google News), weather (Open-Meteo) and city photos (Wikipedia), refreshed every time you open the app**
+- **Working again: live news (Google News), weather (Open-Meteo) and city photos (Wikipedia), refreshed every time you open the app and every 3 hours while it runs on its own**
+- **Breaking news first: "Breaking", "Just in" and "Live updates" headlines go to the top**
+- **Live webcams: Hong Kong, Chicago, Vienna, Berlin, Seattle and Paris show a current camera picture of the city (marked LIVE) instead of a photo**
 - **131 cities (the original had about 33), including Seattle, Las Vegas, Honolulu, Havana, Caracas, Brasília, Reykjavík, Lisbon, Istanbul, Athens, Vienna, Stockholm, Aleppo, Baghdad, Tashkent, Kathmandu, Delhi, Mumbai, Karachi, Malé, Hanoi, Jakarta, Taipei, Perth and more**
-- **Earthquakes: every magnitude 5.0+ quake from the last hour appears on the globe with a red marker, its location, depth and time (U.S. Geological Survey data, checked every time you open the app)**
+- **Earthquakes: every magnitude 6.0+ quake from the last 3 hours appears on the globe with a red marker, its location, depth and time (U.S. Geological Survey data). When a new one comes in, the globe flies to it for 10 seconds, then the auto tour carries on**
 - **Local time next to every city, updated every minute**
 - **Temperatures in whole degrees (15 °C, not 14.8 °C)**
 - Celsius or Fahrenheit, **now in the options menu: Settings > Weather > Temperature**
@@ -63,7 +65,7 @@ Features **in bold** are new in Life Around Us. The rest come from the original 
 - The original soundtrack and sound effects
 - **Music menu: Select Track (Dawn's, Daylight, Afterlight, Moonlight and Starlight Theme) or Select by Mood (Energetic, Calm, Dramatic, Upbeat, Electronic)**
 - **Soft ocean-wave ambience under the music**
-- **A new track, ThemeSong06, played first at start-up**
+- **A new track, ThemeSong06, played first at start-up, then ThemeSong03, then the rest of the soundtrack, over and over**
 - **Cleaner sounds: the globe-rotation sound stays, the old scrolling noise is gone, and a jingle plays when you snap to a city**
 
 **PC version**
@@ -218,7 +220,10 @@ On each start, the app looks up your approximate city from your internet connect
 Yes. Press Triangle (or S) for the options menu, then **Settings > Weather > Temperature > Fahrenheit**. The app remembers your choice.
 
 **Why don't I see any earthquakes?**
-Only quakes of magnitude 5.0 or stronger from the last hour are shown, and the list is checked each time you open the app. Most hours have none; worldwide there are roughly one or two a day.
+Only quakes of magnitude 6.0 or stronger from the last 3 hours are shown. The list is checked when you open the app and every 3 hours after that. Worldwide there are only a few a month, so most of the time there are none.
+
+**How does the live refresh work?**
+Every 3 hours the app fetches new news, weather, webcam pictures and earthquakes. It waits until nobody has touched the controller for 10 seconds (or the auto tour is running), then reloads itself in a couple of seconds. The music carries on where it left off. If you're using it, it waits until you stop.
 
 **Can I add my own music?**
 No. Life Around Us plays only its built-in soundtrack.
@@ -233,4 +238,5 @@ No. Life Around Us plays only its built-in soundtrack.
 - **[llvm-mingw](https://github.com/mstorsjo/llvm-mingw)** (Apache-2.0 with LLVM exception): downloaded during the build to compile.
 - **[Python](https://www.python.org/)** (PSF License), **[Pillow](https://python-pillow.org/)** (MIT-CMU), **[NumPy](https://numpy.org/)** (BSD-3-Clause): included in the kit.
 - News: [Google News](https://news.google.com) · Weather: [Open-Meteo](https://open-meteo.com) (CC BY 4.0) · City photos: [Wikipedia / Wikimedia Commons](https://commons.wikimedia.org) contributors · Cloud map: [clouds.matteason.co.uk](https://clouds.matteason.co.uk)
+- Earthquakes: [U.S. Geological Survey](https://earthquake.usgs.gov) · Webcams: [Hong Kong Observatory](https://www.hko.gov.hk), [NOAA GLERL](https://www.glerl.noaa.gov), [foto-webcam.eu](https://www.foto-webcam.eu), [berlin.de](https://www.berlin.de/webcams/), [Roundshot](https://www.roundshot.com) and a public YouTube live stream (Paris)
 
