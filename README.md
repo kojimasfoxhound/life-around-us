@@ -212,10 +212,10 @@ No. Life Around Us plays only its built-in soundtrack.
 
 ## Credits and legal
 
-- **Life with PlayStation** © Sony Interactive Entertainment. "PlayStation" and "Life with PlayStation" are trademarks of Sony Interactive Entertainment. **This project is not made, approved or supported by Sony.**
+- **Life with PlayStation** © Sony Interactive Entertainment. "PlayStation" and "Life with PlayStation" are trademarks of Sony Interactive Entertainment. **This project is fan made revival for PC, not made, approved or supported by Sony.**
 - **[ps3recomp](https://github.com/sp00nznet/ps3recomp)** (MIT License, Ned Heller / sp00nznet): the PS3 recompiler and runtime.
 - **[RPCS3](https://github.com/RPCS3/rpcs3)** (GPL-2.0): downloaded during the build, used only to decrypt your files.
 - **[llvm-mingw](https://github.com/mstorsjo/llvm-mingw)** (Apache-2.0 with LLVM exception): downloaded during the build to compile.
 - **[Python](https://www.python.org/)** (PSF License), **[Pillow](https://python-pillow.org/)** (MIT-CMU), **[NumPy](https://numpy.org/)** (BSD-3-Clause): included in the kit.
 - News: [Google News](https://news.google.com) · Weather: [Open-Meteo](https://open-meteo.com) (CC BY 4.0) · City photos: [Wikipedia / Wikimedia Commons](https://commons.wikimedia.org) contributors · Cloud map: [clouds.matteason.co.uk](https://clouds.matteason.co.uk)
-- ThemeSong06, the splash screen and the Life Around Us changes are by the Life Around Us author.
+
