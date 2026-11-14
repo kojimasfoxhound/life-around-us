@@ -8,7 +8,7 @@ You build it yourself from **your own copy** of Life with PlayStation v1.00. Thi
 
 ![Life Around Us](screenshots/01-splash.jpg)
 
-> **New in v1.2:** live city webcams, news, weather and earthquakes that refresh by themselves every 3 hours, the globe flying to new M6.0+ earthquakes, an auto tour that visits every city before repeating, a new music order, and clocks that keep running all night. See the [patch notes](CHANGELOG.md).
+> **New in v1.3:** Category 4 and 5 hurricanes and typhoons on the globe, the International Space Station moving live across it, and controller rumble when the globe reaches a new earthquake. See the [patch notes](CHANGELOG.md).
 
 ---
 
@@ -54,6 +54,8 @@ Features **in bold** are new in Life Around Us. The rest come from the original 
 - **Live webcams: Hong Kong, Chicago, Vienna, Berlin, Seattle and Paris show a current camera picture of the city (marked LIVE) instead of a photo**
 - **131 cities (the original had about 33), including Seattle, Las Vegas, Honolulu, Havana, Caracas, Brasília, Reykjavík, Lisbon, Istanbul, Athens, Vienna, Stockholm, Aleppo, Baghdad, Tashkent, Kathmandu, Delhi, Mumbai, Karachi, Malé, Hanoi, Jakarta, Taipei, Perth and more**
 - **Earthquakes: every magnitude 6.0+ quake from the last 3 hours appears on the globe with a red marker, its location, depth and time (U.S. Geological Survey data). When a new one comes in, the globe flies to it for 10 seconds, then the auto tour carries on**
+- **Hurricanes, typhoons and cyclones: every Category 4 or 5 storm in any ocean appears at its last reported position with its name, category and wind speed (GDACS data, with NOAA and JTWC advisories)**
+- **The International Space Station: a marker that follows the real ISS across the globe second by second**
 - **Local time next to every city, updated every minute**
 - **Temperatures in whole degrees (15 °C, not 14.8 °C)**
 - Celsius or Fahrenheit, **now in the options menu: Settings > Weather > Temperature**
@@ -71,6 +73,7 @@ Features **in bold** are new in Life Around Us. The rest come from the original 
 **PC version**
 - **Native Windows program (no emulator) using DirectX 12**
 - **Full screen by default; Alt+Enter or F11 switches between full screen and a window**
+- **Controller rumble when the globe arrives at a new earthquake: 2 to 4 pulses, stronger for bigger quakes (DualSense, DualShock 4 and Xbox controllers)**
 - **Smooth 60 fps**
 - **Renders at 1440p on stronger graphics cards and 1080p on weaker ones (tested on integrated Intel graphics)**
 - **Sharp text on high-DPI screens, 16x texture filtering and image sharpening**
@@ -225,6 +228,12 @@ Only quakes of magnitude 6.0 or stronger from the last 3 hours are shown. The li
 **How does the live refresh work?**
 Every 3 hours the app fetches new news, weather, webcam pictures and earthquakes. It waits until nobody has touched the controller for 10 seconds (or the auto tour is running), then reloads itself in a couple of seconds. The music carries on where it left off. If you're using it, it waits until you stop.
 
+**Why don't I see any hurricanes?**
+Only Category 4 and 5 storms are shown (winds of 209 km/h / 130 mph or more). Most of the year there are none; they appear during the strongest storms of each season.
+
+**Can I turn the rumble off?**
+Yes. Set the environment variable `LWP_RUMBLE` to `0` before starting the app. Each quake rumbles only once, the first time the globe shows it.
+
 **Can I add my own music?**
 No. Life Around Us plays only its built-in soundtrack.
 
@@ -238,5 +247,5 @@ No. Life Around Us plays only its built-in soundtrack.
 - **[llvm-mingw](https://github.com/mstorsjo/llvm-mingw)** (Apache-2.0 with LLVM exception): downloaded during the build to compile.
 - **[Python](https://www.python.org/)** (PSF License), **[Pillow](https://python-pillow.org/)** (MIT-CMU), **[NumPy](https://numpy.org/)** (BSD-3-Clause): included in the kit.
 - News: [Google News](https://news.google.com) · Weather: [Open-Meteo](https://open-meteo.com) (CC BY 4.0) · City photos: [Wikipedia / Wikimedia Commons](https://commons.wikimedia.org) contributors · Cloud map: [clouds.matteason.co.uk](https://clouds.matteason.co.uk)
-- Earthquakes: [U.S. Geological Survey](https://earthquake.usgs.gov) · Webcams: [Hong Kong Observatory](https://www.hko.gov.hk), [NOAA GLERL](https://www.glerl.noaa.gov), [foto-webcam.eu](https://www.foto-webcam.eu), [berlin.de](https://www.berlin.de/webcams/), [Roundshot](https://www.roundshot.com) and a public YouTube live stream (Paris)
+- Earthquakes: [U.S. Geological Survey](https://earthquake.usgs.gov) · Storms: [GDACS](https://www.gdacs.org) · ISS position: [wheretheiss.at](https://wheretheiss.at), photo: NASA · Webcams: [Hong Kong Observatory](https://www.hko.gov.hk), [NOAA GLERL](https://www.glerl.noaa.gov), [foto-webcam.eu](https://www.foto-webcam.eu), [berlin.de](https://www.berlin.de/webcams/), [Roundshot](https://www.roundshot.com) and a public YouTube live stream (Paris)
 

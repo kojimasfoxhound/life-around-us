@@ -1,5 +1,20 @@
 # Patch notes
 
+## v1.3
+
+To update, download the new **Life-Around-Us-Build-Kit.zip** from [Releases](../../releases/latest), extract it and build again with your v1.00 PKG folder. Then install the new `Life Around Us Setup.exe` over the old one.
+
+### New
+- **Hurricanes, typhoons and cyclones.** Every **Category 4 or 5** storm, in any ocean, appears on the globe at its last reported position:
+  - a blue swirl marker with its name, for example "Typhoon Cempaka"
+  - its category and wind speed (km/h, or mph when you use Fahrenheit)
+  - a panel with its position, when it was reported and the nearest country
+  - Data comes from GDACS (NOAA and JTWC advisories). It is checked at start-up and every 3 hours, and the auto tour reaches storms early.
+- **The International Space Station, live.** A marker follows the real ISS across the globe second by second, with a NASA photo and its altitude. Its path for the next few hours is downloaded with each refresh, so it keeps moving even between refreshes.
+- **Earthquake rumble.** When the globe arrives at a new earthquake, the controller rumbles: 2 pulses below M6.5, 3 below M7.5 and 4 above that, stronger for bigger quakes. Each quake rumbles only once. Works with DualSense and DualShock 4 (USB or Bluetooth) and Xbox controllers. Set `LWP_RUMBLE=0` to turn it off.
+
+---
+
 ## v1.2
 
 To update, download the new **Life-Around-Us-Build-Kit.zip** from [Releases](../../releases/latest), extract it and build again with your v1.00 PKG folder. Then install the new `Life Around Us Setup.exe` over the old one.
