@@ -1,5 +1,29 @@
 # Patch notes
 
+## v1.4
+
+To update, download the new **Life-Around-Us-Build-Kit.zip** from [Releases](../../releases/latest), extract it and build again with your v1.00 PKG folder. Then install the new `Life Around Us Setup.exe` over the old one. The build now also downloads NASA's Earth images (about 270 MB, once).
+
+### New
+- **Your own music.** Make a folder called **Music** on your Desktop and put songs in it (subfolders too): MP3, M4A/AAC, Apple Lossless, FLAC, WAV or WMA. They play after the soundtrack.
+  - **Music > My Music** lists your songs (up to 50). Pick one to play it and carry on through your songs, or choose **Play All My Songs**.
+  - **Music > Original Soundtrack** goes back to the original loop (ThemeSong06, ThemeSong03, then the rest).
+  - Your choice is remembered. A file that cannot play is skipped.
+- **A NASA Earth that follows the month.** The day side uses NASA's Blue Marble for the current month: snow across the north in winter, green land in summer, in the app's own colours.
+- **Newer night lights with a glow.** NASA's Black Marble 2016 replaces the app's city lights from around 2000: today's cities, roads and coastlines, with a soft halo round the big ones.
+- **The Milky Way** behind the twinkling stars.
+- **7 more live webcams:** London, Sydney, Toronto, Las Vegas, Wellington, Salt Lake City and Boise (13 in all).
+- **Miami, Kingston and Santo Domingo** (133 cities). Havana is removed.
+
+### Improved
+- **Cleaner menus.** The PlayStation button shapes next to the "Life" logo in the menus are gone.
+- To go back to the original Earth, set `LWP_EARTH=classic`; to turn off the Milky Way, `LWP_MILKYWAY=0`.
+
+### Fixed
+- **No black ring round the Earth.** Zoomed out, the night side of the atmosphere no longer hides the stars behind it as a dark border.
+
+---
+
 ## v1.3
 
 To update, download the new **Life-Around-Us-Build-Kit.zip** from [Releases](../../releases/latest), extract it and build again with your v1.00 PKG folder. Then install the new `Life Around Us Setup.exe` over the old one.

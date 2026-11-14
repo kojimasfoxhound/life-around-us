@@ -8,7 +8,7 @@ You build it yourself from **your own copy** of Life with PlayStation v1.00. Thi
 
 ![Life Around Us](screenshots/01-splash.jpg)
 
-> **New in v1.3:** Category 4 and 5 hurricanes and typhoons on the globe, the International Space Station moving live across it, and controller rumble when the globe reaches a new earthquake. See the [patch notes](CHANGELOG.md).
+> **New in v1.4:** play your own music (a Music folder on your Desktop, with a My Music menu), a NASA Earth that changes with the month, newer night lights with glowing cities, the Milky Way behind the stars, 7 more live webcams, and Miami, Kingston and Santo Domingo. See the [patch notes](CHANGELOG.md).
 
 ---
 
@@ -40,8 +40,9 @@ Features **in bold** are new in Life Around Us. The rest come from the original 
 - Auto tour: when left alone, the camera flies from city to city
 - Live cloud cover over the globe
 - **Today's real cloud map, downloaded at every start**
-- **Twinkling stars in space**
-- **Brighter city lights and a sharper Earth**
+- **Twinkling stars in space, with the Milky Way behind them**
+- **A NASA Earth for every month: snow in northern winters, green summers (NASA Blue Marble)**
+- **Newer, more detailed night lights (NASA Black Marble 2016) with a soft glow round big cities**
 - **Smoother globe edges (edge anti-aliasing)**
 - **The auto tour starts after 10 seconds idle (was 15) and visits every city once before any city comes round again**
 
@@ -51,8 +52,8 @@ Features **in bold** are new in Life Around Us. The rest come from the original 
 - City photos in the info panel
 - **Working again: live news (Google News), weather (Open-Meteo) and city photos (Wikipedia), refreshed every time you open the app and every 3 hours while it runs on its own**
 - **Breaking news first: "Breaking", "Just in" and "Live updates" headlines go to the top**
-- **Live webcams: Hong Kong, Chicago, Vienna, Berlin, Seattle and Paris show a current camera picture of the city (marked LIVE) instead of a photo**
-- **131 cities (the original had about 33), including Seattle, Las Vegas, Honolulu, Havana, Caracas, Brasília, Reykjavík, Lisbon, Istanbul, Athens, Vienna, Stockholm, Aleppo, Baghdad, Tashkent, Kathmandu, Delhi, Mumbai, Karachi, Malé, Hanoi, Jakarta, Taipei, Perth and more**
+- **Live webcams: Hong Kong, Chicago, Vienna, Berlin, Seattle, Paris, London, Sydney, Toronto, Las Vegas, Wellington, Salt Lake City and Boise show a current camera picture of the city (marked LIVE) instead of a photo**
+- **133 cities (the original had about 33), including Seattle, Las Vegas, Honolulu, Miami, Kingston, Santo Domingo, Caracas, Brasília, Reykjavík, Lisbon, Istanbul, Athens, Vienna, Stockholm, Aleppo, Baghdad, Tashkent, Kathmandu, Delhi, Mumbai, Karachi, Malé, Hanoi, Jakarta, Taipei, Perth and more**
 - **Earthquakes: every magnitude 6.0+ quake from the last 3 hours appears on the globe with a red marker, its location, depth and time (U.S. Geological Survey data). When a new one comes in, the globe flies to it for 10 seconds, then the auto tour carries on**
 - **Hurricanes, typhoons and cyclones: every Category 4 or 5 storm in any ocean appears at its last reported position with its name, category and wind speed (GDACS data, with NOAA and JTWC advisories)**
 - **The International Space Station: a marker that follows the real ISS across the globe second by second**
@@ -68,6 +69,7 @@ Features **in bold** are new in Life Around Us. The rest come from the original 
 - **Music menu: Select Track (Dawn's, Daylight, Afterlight, Moonlight and Starlight Theme) or Select by Mood (Energetic, Calm, Dramatic, Upbeat, Electronic)**
 - **Soft ocean-wave ambience under the music**
 - **A new track, ThemeSong06, played first at start-up, then ThemeSong03, then the rest of the soundtrack, over and over**
+- **Your own music: put songs in a folder called `Music` on your Desktop (MP3, M4A/AAC, Apple Lossless, FLAC, WAV or WMA). They play after the soundtrack; Music > My Music lets you pick one or play only yours, and Music > Original Soundtrack goes back to the original loop**
 - **Cleaner sounds: the globe-rotation sound stays, the old scrolling noise is gone, and a jingle plays when you snap to a city**
 
 **PC version**
@@ -92,8 +94,8 @@ Features **in bold** are new in Life Around Us. The rest come from the original 
 | **Windows** | Windows 10 or 11, 64-bit |
 | **Graphics** | Any DirectX 12 graphics card, including recent Intel integrated graphics |
 | **Memory** | 8 GB or more recommended |
-| **Disk space** | About 4 GB free during the build; the installed app is about 300 MB |
-| **Internet** | Needed for the build (it downloads two free tools) and for live news and weather |
+| **Disk space** | About 5 GB free during the build; the installed app is about 500 MB |
+| **Internet** | Needed for the build (it downloads two free tools and NASA's Earth images, about 1 GB in all) and for live news and weather |
 | **Visual C++ Redistributable** | Most PCs already have it. If the build asks, get it [from Microsoft](https://aka.ms/vs/17/release/vc_redist.x64.exe) |
 
 ---
@@ -119,7 +121,7 @@ Copy the installed app folder **`/dev_hdd0/game/NPIA00002`** off your PS3 to you
 
 ### Step 2: Download the build kit
 
-1. Go to [**Releases**](../../releases/latest) and download **`Life-Around-Us-Build-Kit.zip`** (about 52 MB).
+1. Go to [**Releases**](../../releases/latest) and download **`Life-Around-Us-Build-Kit.zip`** (about 53 MB).
 2. Right-click the zip and choose **Extract All...**
 3. Extract it to a normal folder, such as **Documents** or **Desktop**.
    > Don't run it from inside the zip or from a temporary folder: RPCS3 (used to decrypt your files) refuses to run from temporary folders.
@@ -235,7 +237,10 @@ Only Category 4 and 5 storms are shown (winds of 209 km/h / 130 mph or more). Mo
 Yes. Set the environment variable `LWP_RUMBLE` to `0` before starting the app. Each quake rumbles only once, the first time the globe shows it.
 
 **Can I add my own music?**
-No. Life Around Us plays only its built-in soundtrack.
+Yes. Make a folder called `Music` on your Desktop and put songs in it (subfolders work too): MP3, M4A/AAC, Apple Lossless, FLAC, WAV or WMA. Restart the app. Your songs play after the soundtrack; **Music > My Music** lists them (up to 50) and **Music > Original Soundtrack** goes back to the original loop.
+
+**Can I go back to the original Earth?**
+Yes. Set the environment variable `LWP_EARTH` to `classic`, or delete the `world_nasa` folder (in the app folder, under `vfs/PS3_GAME/USRDIR/data`). `LWP_MILKYWAY=0` turns the Milky Way off.
 
 ---
 
@@ -247,5 +252,6 @@ No. Life Around Us plays only its built-in soundtrack.
 - **[llvm-mingw](https://github.com/mstorsjo/llvm-mingw)** (Apache-2.0 with LLVM exception): downloaded during the build to compile.
 - **[Python](https://www.python.org/)** (PSF License), **[Pillow](https://python-pillow.org/)** (MIT-CMU), **[NumPy](https://numpy.org/)** (BSD-3-Clause): included in the kit.
 - News: [Google News](https://news.google.com) · Weather: [Open-Meteo](https://open-meteo.com) (CC BY 4.0) · City photos: [Wikipedia / Wikimedia Commons](https://commons.wikimedia.org) contributors · Cloud map: [clouds.matteason.co.uk](https://clouds.matteason.co.uk)
-- Earthquakes: [U.S. Geological Survey](https://earthquake.usgs.gov) · Storms: [GDACS](https://www.gdacs.org) · ISS position: [wheretheiss.at](https://wheretheiss.at), photo: NASA · Webcams: [Hong Kong Observatory](https://www.hko.gov.hk), [NOAA GLERL](https://www.glerl.noaa.gov), [foto-webcam.eu](https://www.foto-webcam.eu), [berlin.de](https://www.berlin.de/webcams/), [Roundshot](https://www.roundshot.com) and a public YouTube live stream (Paris)
+- Earthquakes: [U.S. Geological Survey](https://earthquake.usgs.gov) · Storms: [GDACS](https://www.gdacs.org) · ISS position: [wheretheiss.at](https://wheretheiss.at), photo: NASA · Webcams: [Hong Kong Observatory](https://www.hko.gov.hk), [NOAA GLERL](https://www.glerl.noaa.gov), [foto-webcam.eu](https://www.foto-webcam.eu), [berlin.de](https://www.berlin.de/webcams/), [Roundshot](https://www.roundshot.com), a public YouTube live stream (Paris), and the traffic cameras of Transport for London, Transport for NSW, NZ Transport Agency, Nevada DOT, Utah DOT, Ontario 511 and Idaho 511
+- Earth: NASA Blue Marble Next Generation and Black Marble 2016 (NASA Earth Observatory, public domain)
 
