@@ -1,5 +1,17 @@
 # Patch notes
 
+## v1.5
+
+To update, download the new **Life-Around-Us-Build-Kit.zip** from [Releases](../../releases/latest), extract it and build again with your v1.00 PKG folder. Then install the new `Life Around Us Setup.exe` over the old one.
+
+### Improved
+- **Start-up screen.** The splash now says the app covers **over 110 cities** (it said over 80).
+
+### Known issue
+- The local time next to each city shows the time when the app started or last refreshed (every 3 hours), not the minute you are looking at it. A fix is being worked on.
+
+---
+
 ## v1.4
 
 To update, download the new **Life-Around-Us-Build-Kit.zip** from [Releases](../../releases/latest), extract it and build again with your v1.00 PKG folder. Then install the new `Life Around Us Setup.exe` over the old one. The build now also downloads NASA's Earth images (about 270 MB, once).

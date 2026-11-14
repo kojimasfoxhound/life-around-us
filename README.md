@@ -8,6 +8,8 @@ You build it yourself from **your own copy** of Life with PlayStation v1.00. Thi
 
 ![Life Around Us](screenshots/01-splash.jpg)
 
+> **v1.5:** the start-up screen now says over 110 cities.
+>
 > **New in v1.4:** play your own music (a Music folder on your Desktop, with a My Music menu), a NASA Earth that changes with the month, newer night lights with glowing cities, the Milky Way behind the stars, 7 more live webcams, and Miami, Kingston and Santo Domingo. See the [patch notes](CHANGELOG.md).
 
 ---
@@ -57,7 +59,7 @@ Features **in bold** are new in Life Around Us. The rest come from the original 
 - **Earthquakes: every magnitude 6.0+ quake from the last 3 hours appears on the globe with a red marker, its location, depth and time (U.S. Geological Survey data). When a new one comes in, the globe flies to it for 10 seconds, then the auto tour carries on**
 - **Hurricanes, typhoons and cyclones: every Category 4 or 5 storm in any ocean appears at its last reported position with its name, category and wind speed (GDACS data, with NOAA and JTWC advisories)**
 - **The International Space Station: a marker that follows the real ISS across the globe second by second**
-- **Local time next to every city, updated every minute**
+- **Local time next to every city (set at start-up and at each 3-hour refresh)**
 - **Temperatures in whole degrees (15 °C, not 14.8 °C)**
 - Celsius or Fahrenheit, **now in the options menu: Settings > Weather > Temperature**
 - **Clouds and cities shown together**
